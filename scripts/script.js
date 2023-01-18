@@ -27,9 +27,9 @@ arrowright.onclick = nextImage;
 document.addEventListener('keydown', function(event) {
 	currentId = document.activeElement.id;
 	if (event.code == 'ArrowRight') nextImage();	// переключаем фото по нажатию стрелки вправо
-	if (event.code == 'ArrowLeft') nextImage();		// переключаем фото по нажатию стрелки влево
-	if (event.code == 'Space') nextImage();			// переключаем фото по нажатию пробела
-	if (event.code == 'Enter') {					// переключаем фото по нажатию Enter если есть фокус 
+	if (event.code == 'ArrowLeft') nextImage();	// переключаем фото по нажатию стрелки влево
+	if (event.code == 'Space') nextImage();		// переключаем фото по нажатию пробела
+	if (event.code == 'Enter') {			// переключаем фото по нажатию Enter если есть фокус 
 		if (currentId == 'arrowleft') prevImage();	
 		if (currentId == 'arrowright') nextImage();	
 	}
