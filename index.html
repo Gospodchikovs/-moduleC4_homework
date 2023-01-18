@@ -1,0 +1,41 @@
+<!-- Реализуйте слайдер для фото, исходя из требований ниже.
+Общие требования:
+
+-Должна быть возможность пролистывать фото. Например, добавить 2 кнопки вперед и назад (предыдущее, 
+следующее и так далее);
+-При клике «назад» на первом фото должно открываться последнее. При клике «вперед» на последнем фото 
+должно открываться первое;
+-Блок, в котором располагаются изображения, не должен меняться под размер картинок;
+-Добавить анимацию при переключении фото;
+-На входе — массив изображений. Их может быть любое количество;
+-Картинки можно положить в папку asset. Либо использовать стороннее API, сделав GET запрос для получения
+изображений;
+-Соблюдать семантическую верстку;
+-Использовать селекторы по тегу для задания стилей нельзя. Использовать классы. В случае, когда есть 
+необходимость — селектор по id;
+-Дизайн произвольный. Минимум — застилизовать кнопки (добавить hover) и обеспечить для них accessibility: 
+переключение по tab, outline, cursor. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+    <div class="changer">
+        <div class="changer-items"><img src="asset/img1.jpg" alt="image"></div>
+        <div class="changer-items"><img src="asset/img2.jpg" alt="image1"></div>
+        <!-- сюда можно добавить любое количество фото -->
+        <div class="changer-items"><img src="asset/img3.jpg" alt="image2"></div>
+        <div class="changer-items"><img src="asset/img4.jpg" alt="image3"></div>
+        <div class="changer-arrows">  
+            <div class="arrow arrow-left" id="arrowleft" tabindex="0"></div>
+            <div class="arrow arrow-right" id="arrowright" tabindex="0"></div>
+        </div>  
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html> 

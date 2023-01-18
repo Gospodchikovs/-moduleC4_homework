@@ -1,0 +1,76 @@
+.changer{
+    height: 400px;
+    width: 700px;
+    position: relative;
+    display: flex;
+}
+
+.changer-items {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    animation: none 500ms linear; 
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes hide {
+    0% { opacity: 1 }
+    50% { opacity: 0.5 }
+    100% { opacity: 0 }
+}
+
+@keyframes reveal {
+    0% { opacity: 0 }
+    50% { opacity: 0.5 }
+    100% { opacity: 1 }
+}
+
+.changer-items img {
+    height: auto;
+    width: 100%;
+}
+
+.changer-arrows {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border-top: 5px solid red;
+    border-right: 5px solid red;
+    margin: 20px;
+    opacity: 0.2;
+    animation: arrow 4000ms linear infinite;
+}    
+
+@keyframes arrow {
+    0% { opacity: 0.2 }
+    25% { opacity: 0,6;}
+    50% { opacity: 1 }
+    75% { opacity: 0.6;}
+    100% { opacity: 0.2 }
+}
+
+.arrow:hover {
+    opacity: 1;
+    cursor: pointer;
+    animation: none;
+}
+
+.arrow-right {
+    transform: rotate(45deg); 
+} 
+
+.arrow-left {
+    transform: rotate(-135deg); 
+}  
